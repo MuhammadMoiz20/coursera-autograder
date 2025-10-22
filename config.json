@@ -1,0 +1,7 @@
+{
+  "partId": "MernNotesApp",
+  "graderCpu": 2,
+  "graderMemoryLimit": 8192,
+  "graderTimeout": 300,
+  "summary": "MERN Stack Notes App Autograder - Tests React components, Firebase integration, drag-and-drop functionality, and CRUD operations"
+}
