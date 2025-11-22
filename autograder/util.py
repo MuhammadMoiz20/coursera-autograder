@@ -28,31 +28,3 @@ def send_feedback(score, msg):
     except Exception as e:
         print(f"Warning: Could not write feedback file: {e}")
 
-# helper function to match part Ids
-def match_partId(partId, testCases):
-    # Handle None and string "None" cases
-    if partId is None or partId == "None":
-        partId = "MernNotesApp"  # Default fallback
-    
-    print_stderr(f"Attempting to match partId: '{partId}'")
-    print_stderr(f"Available test case keys: {list(testCases.keys())}")
-    
-    # First try direct key match (new approach)
-    if partId in testCases:
-        print_stderr(f"Found direct match for partId: '{partId}'")
-        return testCases[partId]
-    
-    # Fallback to old approach for backward compatibility
-    partIds = {}
-    for key in testCases:
-        if "partId" in testCases[key]:
-            partIds[testCases[key]["partId"]] = key
-    
-    print_stderr(f"Available partIds in test cases: {list(partIds.keys())}")
-    
-    if partId in partIds:
-        print_stderr(f"Found indirect match for partId: '{partId}' -> '{partIds[partId]}'")
-        return testCases[partIds[partId]]
-    else:
-        print_stderr(f"No match found for partId: '{partId}'")
-        return None

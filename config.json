@@ -1,7 +1,8 @@
 {
-  "partId": "MernNotesApp",
+  "partId": "4Z8Ik",
   "graderCpu": 2,
   "graderMemoryLimit": 8192,
   "graderTimeout": 300,
-  "summary": "MERN Stack Notes App Autograder - Tests React components, Firebase integration, drag-and-drop functionality, and CRUD operations"
+  "cypressSpecPattern": ".*",
+  "summary": "Lab-1 Landing Page Autograder - Consumes encrypted Cypress results for part 4Z8Ik and reports the secure test summary"
 }
